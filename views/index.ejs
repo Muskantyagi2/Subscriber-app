@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Subscribers</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>All Subscribers</h1>
+        
+        <div class="actions">
+            <a href="/subscribers/new" class="btn btn-primary">Add New Subscriber</a>
+        </div>
+
+        <table class="subscribers-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Channel</th>
+                    <th>Subscribe Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if (subscribers.length > 0) { %>
+                    <% subscribers.forEach(subscriber => { %>
+                        <tr>
+                            <td><%= subscriber.name %></td>
+                            <td><%= subscriber.email %></td>
+                            <td><%= subscriber.subscribeToChannel %></td>
+                            <td><%= subscriber.subscribeOn.toLocaleDateString() %></td>
+                            <td>
+                                <a href="/subscribers/<%= subscriber._id %>" class="btn btn-info">View</a>
+                                <a href="/subscribers/<%= subscriber._id %>/edit" class="btn btn-warning">Edit</a>
+                                <a href="/subscribers/<%= subscriber._id %>/delete" class="btn btn-danger">Delete</a>
+                            </td>
+                        </tr>
+                    <% }) %>
+                <% } else { %>
+                    <tr>
+                        <td colspan="5" class="no-data">No subscribers found</td>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Subscriber</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Delete Subscriber</h1>
+        
+        <div class="verification-section">
+            <h3>Verify Email: <%= subscriber.email %></h3>
+            <p>Are you sure you want to delete this subscriber? This action cannot be undone.</p>
+        </div>
+
+        <div class="subscriber-details">
+            <div class="detail-group">
+                <label>Name:</label>
+                <span><%= subscriber.name %></span>
+            </div>
+
+            <div class="detail-group">
+                <label>Email:</label>
+                <span><%= subscriber.email %></span>
+            </div>
+
+            <div class="detail-group">
+                <label>Subscribe to Channel:</label>
+                <span><%= subscriber.subscribeToChannel %></span>
+            </div>
+
+            <div class="detail-group">
+                <label>Subscribe Date:</label>
+                <span><%= subscriber.subscribeOn.toLocaleDateString() %></span>
+            </div>
+        </div>
+
+        <form action="/subscribers/<%= subscriber._id %>" method="POST" class="delete-form">
+            <input type="hidden" name="_method" value="DELETE">
+            
+            <div class="form-actions">
+                <button type="submit" class="btn btn-danger">Confirm Delete</button>
+                <a href="/subscribers/<%= subscriber._id %>" class="btn btn-secondary">Cancel</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

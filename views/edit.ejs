@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Subscriber</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Edit Subscriber</h1>
+        
+        <div class="verification-section">
+            <h3>Verify Email: <%= subscriber.email %></h3>
+            <p>Please confirm you want to edit this subscriber's information.</p>
+        </div>
+
+        <form action="/subscribers/<%= subscriber._id %>" method="POST" class="subscriber-form">
+            <input type="hidden" name="_method" value="PUT">
+            
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" value="<%= subscriber.name %>" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" value="<%= subscriber.email %>" required>
+            </div>
+
+            <div class="form-group">
+                <label for="subscribeToChannel">Subscribe to Channel:</label>
+                <input type="text" id="subscribeToChannel" name="subscribeToChannel" value="<%= subscriber.subscribeToChannel %>" required>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Update Subscriber</button>
+                <a href="/subscribers/<%= subscriber._id %>" class="btn btn-secondary">Cancel</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

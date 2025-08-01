@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscriber Details</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Subscriber Details</h1>
+        
+        <div class="subscriber-details">
+            <div class="detail-group">
+                <label>Name:</label>
+                <span><%= subscriber.name %></span>
+            </div>
+
+            <div class="detail-group">
+                <label>Email:</label>
+                <span><%= subscriber.email %></span>
+            </div>
+
+            <div class="detail-group">
+                <label>Subscribe to Channel:</label>
+                <span><%= subscriber.subscribeToChannel %></span>
+            </div>
+
+            <div class="detail-group">
+                <label>Subscribe Date:</label>
+                <span><%= subscriber.subscribeOn.toLocaleDateString() %></span>
+            </div>
+        </div>
+
+        <div class="form-actions">
+            <a href="/subscribers/<%= subscriber._id %>/edit" class="btn btn-warning">Edit</a>
+            <a href="/subscribers/<%= subscriber._id %>/delete" class="btn btn-danger">Delete</a>
+            <a href="/subscribers" class="btn btn-secondary">Back to List</a>
+        </div>
+    </div>
+</body>
+</html>

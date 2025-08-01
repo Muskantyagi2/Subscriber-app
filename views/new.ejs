@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Subscriber</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Add New Subscriber</h1>
+        
+        <% if (typeof error !== 'undefined') { %>
+            <div class="error-message">
+                <p>⚠️ <%= error %></p>
+            </div>
+        <% } %>
+        
+        <form action="/subscribers" method="POST" class="subscriber-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" value="<%= typeof formData !== 'undefined' ? formData.name : '' %>" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" value="<%= typeof formData !== 'undefined' ? formData.email : '' %>" required>
+            </div>
+
+            <div class="form-group">
+                <label for="subscribeToChannel">Subscribe to Channel:</label>
+                <input type="text" id="subscribeToChannel" name="subscribeToChannel" value="<%= typeof formData !== 'undefined' ? formData.subscribeToChannel : '' %>" required>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Add Subscriber</button>
+                <a href="/subscribers" class="btn btn-secondary">Cancel</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
