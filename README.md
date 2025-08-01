@@ -201,15 +201,10 @@ subscriber-app/
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 👨‍💻 Author
 
 **Your Name**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Email: your.email@example.com
+- GitHub: [@yourusername](https://github.com/Muskantyagi2)
 
 ## 🙏 Acknowledgments
 
@@ -220,8 +215,26 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📱 Screenshots
 
-> Add screenshots of your application here to showcase the beautiful UI
+<img width="1054" height="540" alt="image" src="https://github.com/user-attachments/assets/22340d32-4a00-43ab-909b-9388375d732a" />
 
----
+
+<img width="1056" height="823" alt="image" src="https://github.com/user-attachments/assets/c8b37365-9875-4c91-bc54-71df26ccd2ea" />
+
+
+<img width="1059" height="559" alt="image" src="https://github.com/user-attachments/assets/466094be-a4b7-48b7-8e1b-5329b063aa04" />
+
+
+<img width="1053" height="730" alt="image" src="https://github.com/user-attachments/assets/314d1470-7f43-484d-80b3-f4c4b17838ed" />
+
+
+<img width="1056" height="958" alt="image" src="https://github.com/user-attachments/assets/57915515-8f7e-4c16-bf2b-467524e016ce" />
+
+
+<img width="987" height="920" alt="image" src="https://github.com/user-attachments/assets/44a7b31e-bbd9-4b4c-a114-212ea119ce2e" />
+
+
+<img width="983" height="847" alt="image" src="https://github.com/user-attachments/assets/384cb851-9be6-4d14-8486-96d30b0f25d6" />
+
+
 
 ⭐ **Star this repo if you found it helpful!** ⭐
